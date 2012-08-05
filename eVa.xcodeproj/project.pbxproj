@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4102580415CD566800367C9B /* EvaMainPageControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4102580215CD566800367C9B /* EvaMainPageControllerViewController.m */; };
+		4102580515CD566800367C9B /* EvaMainPageControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4102580315CD566800367C9B /* EvaMainPageControllerViewController.xib */; };
+		416FD9E315C99F7600D7D489 /* evaWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 416FD9E215C99F7600D7D489 /* evaWebService.m */; };
+		41AE977D15C89C9A00121DC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AE977C15C89C9A00121DC7 /* UIKit.framework */; };
+		41AE977F15C89C9A00121DC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AE977E15C89C9A00121DC7 /* Foundation.framework */; };
+		41AE978115C89C9A00121DC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AE978015C89C9A00121DC7 /* CoreGraphics.framework */; };
+		41AE978715C89C9A00121DC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41AE978515C89C9A00121DC7 /* InfoPlist.strings */; };
+		41AE978915C89C9A00121DC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AE978815C89C9A00121DC7 /* main.m */; };
+		41AE978D15C89C9A00121DC7 /* evaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AE978C15C89C9A00121DC7 /* evaAppDelegate.m */; };
+		41AE979015C89C9A00121DC7 /* evaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AE978F15C89C9A00121DC7 /* evaViewController.m */; };
+		41AE979315C89C9A00121DC7 /* evaViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41AE979115C89C9A00121DC7 /* evaViewController_iPhone.xib */; };
+		41AE979615C89C9A00121DC7 /* evaViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41AE979415C89C9A00121DC7 /* evaViewController_iPad.xib */; };
+		41AE979F15C89E4D00121DC7 /* evaUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AE979E15C89E4D00121DC7 /* evaUser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4102580115CD566800367C9B /* EvaMainPageControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaMainPageControllerViewController.h; sourceTree = "<group>"; };
+		4102580215CD566800367C9B /* EvaMainPageControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaMainPageControllerViewController.m; sourceTree = "<group>"; };
+		4102580315CD566800367C9B /* EvaMainPageControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EvaMainPageControllerViewController.xib; sourceTree = "<group>"; };
+		416FD9E115C99F7600D7D489 /* evaWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evaWebService.h; sourceTree = "<group>"; };
+		416FD9E215C99F7600D7D489 /* evaWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = evaWebService.m; sourceTree = "<group>"; };
+		41AE977815C89C9A00121DC7 /* eVa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eVa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41AE977C15C89C9A00121DC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		41AE977E15C89C9A00121DC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		41AE978015C89C9A00121DC7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		41AE978415C89C9A00121DC7 /* eVa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "eVa-Info.plist"; sourceTree = "<group>"; };
+		41AE978615C89C9A00121DC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		41AE978815C89C9A00121DC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		41AE978A15C89C9A00121DC7 /* eVa-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eVa-Prefix.pch"; sourceTree = "<group>"; };
+		41AE978B15C89C9A00121DC7 /* evaAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = evaAppDelegate.h; sourceTree = "<group>"; };
+		41AE978C15C89C9A00121DC7 /* evaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = evaAppDelegate.m; sourceTree = "<group>"; };
+		41AE978E15C89C9A00121DC7 /* evaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = evaViewController.h; sourceTree = "<group>"; };
+		41AE978F15C89C9A00121DC7 /* evaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = evaViewController.m; sourceTree = "<group>"; };
+		41AE979215C89C9A00121DC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/evaViewController_iPhone.xib; sourceTree = "<group>"; };
+		41AE979515C89C9A00121DC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/evaViewController_iPad.xib; sourceTree = "<group>"; };
+		41AE979D15C89E4D00121DC7 /* evaUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evaUser.h; sourceTree = "<group>"; };
+		41AE979E15C89E4D00121DC7 /* evaUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = evaUser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41AE977515C89C9A00121DC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AE977D15C89C9A00121DC7 /* UIKit.framework in Frameworks */,
+				41AE977F15C89C9A00121DC7 /* Foundation.framework in Frameworks */,
+				41AE978115C89C9A00121DC7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		416FD9DF15C99F5700D7D489 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				416FD9E115C99F7600D7D489 /* evaWebService.h */,
+				416FD9E215C99F7600D7D489 /* evaWebService.m */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		41AE976D15C89C9A00121DC7 = {
+			isa = PBXGroup;
+			children = (
+				41AE978215C89C9A00121DC7 /* eVa */,
+				41AE977B15C89C9A00121DC7 /* Frameworks */,
+				41AE977915C89C9A00121DC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		41AE977915C89C9A00121DC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41AE977815C89C9A00121DC7 /* eVa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41AE977B15C89C9A00121DC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41AE977C15C89C9A00121DC7 /* UIKit.framework */,
+				41AE977E15C89C9A00121DC7 /* Foundation.framework */,
+				41AE978015C89C9A00121DC7 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41AE978215C89C9A00121DC7 /* eVa */ = {
+			isa = PBXGroup;
+			children = (
+				416FD9DF15C99F5700D7D489 /* services */,
+				41AE979C15C89E3000121DC7 /* models */,
+				41AE978B15C89C9A00121DC7 /* evaAppDelegate.h */,
+				41AE978C15C89C9A00121DC7 /* evaAppDelegate.m */,
+				41AE978E15C89C9A00121DC7 /* evaViewController.h */,
+				41AE978F15C89C9A00121DC7 /* evaViewController.m */,
+				4102580115CD566800367C9B /* EvaMainPageControllerViewController.h */,
+				4102580215CD566800367C9B /* EvaMainPageControllerViewController.m */,
+				4102580315CD566800367C9B /* EvaMainPageControllerViewController.xib */,
+				41AE979115C89C9A00121DC7 /* evaViewController_iPhone.xib */,
+				41AE979415C89C9A00121DC7 /* evaViewController_iPad.xib */,
+				41AE978315C89C9A00121DC7 /* Supporting Files */,
+			);
+			path = eVa;
+			sourceTree = "<group>";
+		};
+		41AE978315C89C9A00121DC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41AE978415C89C9A00121DC7 /* eVa-Info.plist */,
+				41AE978515C89C9A00121DC7 /* InfoPlist.strings */,
+				41AE978815C89C9A00121DC7 /* main.m */,
+				41AE978A15C89C9A00121DC7 /* eVa-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41AE979C15C89E3000121DC7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				41AE979D15C89E4D00121DC7 /* evaUser.h */,
+				41AE979E15C89E4D00121DC7 /* evaUser.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41AE977715C89C9A00121DC7 /* eVa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41AE979915C89C9A00121DC7 /* Build configuration list for PBXNativeTarget "eVa" */;
+			buildPhases = (
+				41AE977415C89C9A00121DC7 /* Sources */,
+				41AE977515C89C9A00121DC7 /* Frameworks */,
+				41AE977615C89C9A00121DC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eVa;
+			productName = eVa;
+			productReference = 41AE977815C89C9A00121DC7 /* eVa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41AE976F15C89C9A00121DC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = eva;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Ashkan Nasseri";
+			};
+			buildConfigurationList = 41AE977215C89C9A00121DC7 /* Build configuration list for PBXProject "eVa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 41AE976D15C89C9A00121DC7;
+			productRefGroup = 41AE977915C89C9A00121DC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41AE977715C89C9A00121DC7 /* eVa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41AE977615C89C9A00121DC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AE978715C89C9A00121DC7 /* InfoPlist.strings in Resources */,
+				41AE979315C89C9A00121DC7 /* evaViewController_iPhone.xib in Resources */,
+				41AE979615C89C9A00121DC7 /* evaViewController_iPad.xib in Resources */,
+				4102580515CD566800367C9B /* EvaMainPageControllerViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41AE977415C89C9A00121DC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AE978915C89C9A00121DC7 /* main.m in Sources */,
+				41AE978D15C89C9A00121DC7 /* evaAppDelegate.m in Sources */,
+				41AE979015C89C9A00121DC7 /* evaViewController.m in Sources */,
+				41AE979F15C89E4D00121DC7 /* evaUser.m in Sources */,
+				416FD9E315C99F7600D7D489 /* evaWebService.m in Sources */,
+				4102580415CD566800367C9B /* EvaMainPageControllerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		41AE978515C89C9A00121DC7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41AE978615C89C9A00121DC7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		41AE979115C89C9A00121DC7 /* evaViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41AE979215C89C9A00121DC7 /* en */,
+			);
+			name = evaViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		41AE979415C89C9A00121DC7 /* evaViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41AE979515C89C9A00121DC7 /* en */,
+			);
+			name = evaViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		41AE979715C89C9A00121DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41AE979815C89C9A00121DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		41AE979A15C89C9A00121DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "eVa/eVa-Prefix.pch";
+				INFOPLIST_FILE = "eVa/eVa-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		41AE979B15C89C9A00121DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "eVa/eVa-Prefix.pch";
+				INFOPLIST_FILE = "eVa/eVa-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41AE977215C89C9A00121DC7 /* Build configuration list for PBXProject "eVa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41AE979715C89C9A00121DC7 /* Debug */,
+				41AE979815C89C9A00121DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41AE979915C89C9A00121DC7 /* Build configuration list for PBXNativeTarget "eVa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41AE979A15C89C9A00121DC7 /* Debug */,
+				41AE979B15C89C9A00121DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 41AE976F15C89C9A00121DC7 /* Project object */;
+}
