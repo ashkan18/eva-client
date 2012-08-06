@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface evaViewController : UIViewController
+@interface evaViewController : UIViewController<NSURLConnectionDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UILabel *errorMessage;
-
+@property (nonatomic, retain) NSURLResponse* response;
+@property (nonatomic, retain) NSMutableData* responseData;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loading;
 
 - (IBAction)login:(id)sender;
 

@@ -16,9 +16,12 @@
 @end
 
 @implementation evaViewController
+@synthesize loading;
 @synthesize userName;
 @synthesize password;
 @synthesize errorMessage;
+
+
 
 - (void)viewDidLoad
 {
@@ -31,6 +34,7 @@
     [self setUserName:nil];
     [self setPassword:nil];
     [self setErrorMessage:nil];
+    [self setLoading:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -47,7 +51,68 @@
 -(IBAction)login:(id)sender{
     evaWebService* webService = [[evaWebService alloc] init];
     
-    NSDictionary *response = [webService loginForUser:userName.text withPassword:password.text];
+    [webService setDelegate:self];
+    [self.password resignFirstResponder];
+    [self.loading setHidden: FALSE];
+    
+    
+    
+    void (^handler) (NSURLResponse *urlResponse, NSData *responseDate, NSError *error) =
+    ^(NSURLResponse *urlResponse, NSData *responseData, NSError *error)
+    {
+        
+        NSLog(@"respone = %@", responseData);
+        
+        NSError *parseError;
+        id parsedObj = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&parseError];
+        
+        NSDictionary *json_dict = (NSDictionary *)parsedObj;
+        NSLog(@"dict here %@" , json_dict);
+        id success = [json_dict valueForKey: @"success"];
+        if ([success intValue] == 1){
+            id userPsk = [json_dict valueForKey: @"response"];
+            evaUser *user = [[evaUser alloc] init];
+            [user setPsk: [[NSNumber alloc] initWithInt:[userPsk intValue]]];
+            [user setFirstName:[json_dict valueForKey:@"firstname"]];
+            [user setLastName:[json_dict valueForKey:@"lastname"]];
+            // go to main page
+            EvaMainPageControllerViewController *emc = [[EvaMainPageControllerViewController alloc] init];
+            
+            [emc setUser:user];
+            
+            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:emc];
+            [nvc setModalPresentationStyle:UIModalPresentationFormSheet];
+            [nvc setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+            
+            [self presentViewController:nvc animated:YES completion:nil];
+            
+            
+        }else{
+            [errorMessage setText: [NSString stringWithFormat:@"%@", [json_dict valueForKey: @"error"]]];
+        }
+        
+    };
+    
+    [webService setHandler:handler];
+    
+    [webService loginForUser:userName.text withPassword:password.text];
+
+    
+    
+}
+
+/*-(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    NSError *err;
+    
+    
+    NSString *content = [NSString stringWithUTF8String:[response ]];
+    NSLog(@"responseData: %@", content);
+    
+    NSError *parseError;
+    id parsedObj = [NSJSONSerialization JSONObjectWithData:returnData options:0 error:&parseError];
+    
+    NSDictionary *json_dict = (NSDictionary *)parsedObj;
+    NSLog(@"dict here %@" , json_dict);
     id success = [response valueForKey: @"success"];
     if ([success intValue] == 1){
         id userPsk = [response valueForKey: @"response"];
@@ -70,7 +135,6 @@
     }else{
         [errorMessage setText: [NSString stringWithFormat:@"%@", [response valueForKey: @"error"]]];
     }
-    
-}
+}*/
 
 @end

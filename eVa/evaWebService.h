@@ -10,6 +10,10 @@
 
 @interface evaWebService : NSObject
 
--(NSDictionary*) loginForUser:(NSString*) userName withPassword: (NSString*) password;
+@property (nonatomic, weak) id delegate;
+
+@property (nonatomic, weak) id handler;
+
+-(void) loginForUser:(NSString*) userName withPassword: (NSString*) password;
 - (NSString *)urlEncodeValue:(NSString *)str;
 @end
