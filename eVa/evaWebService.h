@@ -15,5 +15,8 @@
 @property (nonatomic, weak) id handler;
 
 -(void) loginForUser:(NSString*) userName withPassword: (NSString*) password;
-- (NSString *)urlEncodeValue:(NSString *)str;
+-(void) registerUser:(NSString*) email withPassword: (NSString*) passowrd
+        andFirstName: (NSString*) firstName andLastName:(NSString*) lastName;
+
+-(NSString *)urlEncodeValue:(NSString *)str;
 @end

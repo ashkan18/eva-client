@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSMutableData* responseData;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loading;
 
-- (IBAction)login:(id)sender;
 
+- (IBAction)login:(id)sender;
+- (IBAction)registerUser:(id)sender;
 @end
