@@ -37,6 +37,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [[self loading] setHidden:TRUE];
 }
 
 - (void)viewDidUnload
@@ -60,55 +61,62 @@
 }
 
 - (IBAction)registerUser:(id)sender{
-    evaWebService* webService = [[evaWebService alloc] init];
+    //first validate the request
     
-    [webService setDelegate:self];
-    [self.lastName resignFirstResponder];
-    [self.password resignFirstResponder];
-    [self.loading setHidden: FALSE];
+    if (![self.password.text isEqualToString: self.confirmPassword.text]){
+        self.errorMessage.text = @"Passowrds didn't match";
+    }else{
+    
+        evaWebService* webService = [[evaWebService alloc] init];
+    
+        [webService setDelegate:self];
+        [self.lastName resignFirstResponder];
+        [self.password resignFirstResponder];
+        [self.loading setHidden: FALSE];
     
     
     
-    void (^handler) (NSURLResponse *urlResponse, NSData *responseDate, NSError *error) =
-    ^(NSURLResponse *urlResponse, NSData *responseData, NSError *error)
-    {
+        void (^handler) (NSURLResponse *urlResponse, NSData *responseDate, NSError *error) =
+        ^(NSURLResponse *urlResponse, NSData *responseData, NSError *error)
+        {
+            
+            NSLog(@"respone = %@", responseData);
         
-        NSLog(@"respone = %@", responseData);
+            NSError *parseError;
+            id parsedObj = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&parseError];
         
-        NSError *parseError;
-        id parsedObj = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&parseError];
+            NSDictionary *json_dict = (NSDictionary *)parsedObj;
+            NSLog(@"dict here %@" , json_dict);
+            id success = [json_dict valueForKey: @"success"];
+            if ([success intValue] == 1){
+                id userPsk = [json_dict valueForKey: @"response"];
+                evaUser *user = [[evaUser alloc] init];
+                [user setPsk: [[NSNumber alloc] initWithInt:[userPsk intValue]]];
+                [user setFirstName:[json_dict valueForKey:@"firstname"]];
+                [user setLastName:[json_dict valueForKey:@"lastname"]];
+                // go to main page
+                EvaMainPageControllerViewController *emc = [[EvaMainPageControllerViewController alloc] init];
+            
+                [emc setUser:user];
+            
+                UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:emc];
+                [nvc setModalPresentationStyle:UIModalPresentationFormSheet];
+                [nvc setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+            
+                [self presentViewController:nvc animated:YES completion:nil];
+            
+            
+            }else{
+                [self.loading setHidden: TRUE];
+                [errorMessage setText: [NSString stringWithFormat:@"%@", [json_dict valueForKey: @"error"]]];
+            }
         
-        NSDictionary *json_dict = (NSDictionary *)parsedObj;
-        NSLog(@"dict here %@" , json_dict);
-        id success = [json_dict valueForKey: @"success"];
-        if ([success intValue] == 1){
-            id userPsk = [json_dict valueForKey: @"response"];
-            evaUser *user = [[evaUser alloc] init];
-            [user setPsk: [[NSNumber alloc] initWithInt:[userPsk intValue]]];
-            [user setFirstName:[json_dict valueForKey:@"firstname"]];
-            [user setLastName:[json_dict valueForKey:@"lastname"]];
-            // go to main page
-            EvaMainPageControllerViewController *emc = [[EvaMainPageControllerViewController alloc] init];
-            
-            [emc setUser:user];
-            
-            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:emc];
-            [nvc setModalPresentationStyle:UIModalPresentationFormSheet];
-            [nvc setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-            
-            [self presentViewController:nvc animated:YES completion:nil];
-            
-            
-        }else{
-            [self.loading setHidden: TRUE];
-            [errorMessage setText: [NSString stringWithFormat:@"%@", [json_dict valueForKey: @"error"]]];
-        }
-        
-    };
+        };
     
-    [webService setHandler:handler];
+        [webService setHandler:handler];
     
-    [webService registerUser:email.text withPassword:password.text andFirstName:firstName.text andLastName:lastName.text];
+        [webService registerUser:email.text withPassword:password.text andFirstName:firstName.text andLastName:lastName.text];
+    }
 }
 
 @end

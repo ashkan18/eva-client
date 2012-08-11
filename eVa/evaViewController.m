@@ -9,6 +9,7 @@
 #import "evaViewController.h"
 #import "evaWebService.h"
 #import "EvaMainPageControllerViewController.h"
+#import "EvaRegisterUserViewController.h"
 #import "evaUser.h"
 
 @interface evaViewController ()
@@ -88,6 +89,7 @@
             
             
         }else{
+            [self.loading setHidden: TRUE];
             [errorMessage setText: [NSString stringWithFormat:@"%@", [json_dict valueForKey: @"error"]]];
         }
         
@@ -101,40 +103,11 @@
     
 }
 
-/*-(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    NSError *err;
+
+- (IBAction)registerUser:(id)sender{
+    EvaRegisterUserViewController* rvc = [[EvaRegisterUserViewController alloc]init];
     
-    
-    NSString *content = [NSString stringWithUTF8String:[response ]];
-    NSLog(@"responseData: %@", content);
-    
-    NSError *parseError;
-    id parsedObj = [NSJSONSerialization JSONObjectWithData:returnData options:0 error:&parseError];
-    
-    NSDictionary *json_dict = (NSDictionary *)parsedObj;
-    NSLog(@"dict here %@" , json_dict);
-    id success = [response valueForKey: @"success"];
-    if ([success intValue] == 1){
-        id userPsk = [response valueForKey: @"response"];
-        evaUser *user = [[evaUser alloc] init];
-        [user setPsk: [[NSNumber alloc] initWithInt:[userPsk intValue]]];
-        [user setFirstName:[response valueForKey:@"firstname"]];
-        [user setLastName:[response valueForKey:@"lastname"]];
-        // go to main page
-        EvaMainPageControllerViewController *emc = [[EvaMainPageControllerViewController alloc] init];
-        
-        [emc setUser:user];
-        
-        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:emc];
-        [nvc setModalPresentationStyle:UIModalPresentationFormSheet];
-        [nvc setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-        
-        [self presentViewController:nvc animated:YES completion:nil];
-        
-        
-    }else{
-        [errorMessage setText: [NSString stringWithFormat:@"%@", [response valueForKey: @"error"]]];
-    }
-}*/
+    [self presentViewController:rvc animated:YES completion:nil];
+}
 
 @end
