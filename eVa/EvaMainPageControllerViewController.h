@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class evaUser;
+@class EvaUser;
 
 @interface EvaMainPageControllerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *welcomMessage;
 @property (weak, nonatomic) IBOutlet UIButton *rentButton;
 @property (weak, nonatomic) IBOutlet UIButton *sellButton;
-@property (nonatomic, strong) evaUser *user;
+@property (nonatomic, strong) EvaUser *user;
 @end

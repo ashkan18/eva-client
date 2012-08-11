@@ -10,7 +10,7 @@
 #import "evaWebService.h"
 #import "EvaMainPageControllerViewController.h"
 #import "EvaRegisterUserViewController.h"
-#import "evaUser.h"
+#import "EvaUser.h"
 
 @interface evaViewController ()
 
@@ -72,7 +72,7 @@
         id success = [json_dict valueForKey: @"success"];
         if ([success intValue] == 1){
             id userPsk = [json_dict valueForKey: @"response"];
-            evaUser *user = [[evaUser alloc] init];
+            EvaUser *user = [[EvaUser alloc] init];
             [user setPsk: [[NSNumber alloc] initWithInt:[userPsk intValue]]];
             [user setFirstName:[json_dict valueForKey:@"firstname"]];
             [user setLastName:[json_dict valueForKey:@"lastname"]];

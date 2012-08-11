@@ -7,7 +7,7 @@
 //
 
 #import "EvaMainPageControllerViewController.h"
-#import "evaUser.h"
+#import "EvaUser.h"
 
 @interface EvaMainPageControllerViewController ()
 

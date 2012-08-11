@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "evaUser.h"
+#import "User.h"
 
-@implementation evaUser
+@implementation EvaUser
 @synthesize userName = _userName;
 @synthesize firstName = _firstName;
 @synthesize lastName = _lastName;

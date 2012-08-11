@@ -13,6 +13,9 @@
 @synthesize delegate;
 @synthesize handler;
 
+/**
+ this method handles calls for login
+ */
 -(void) loginForUser:(NSString *)userName withPassword:(NSString *)password{
     NSString *ghEventsAPIRUL = @"http://192.168.0.106:5000/user/login";
     NSURL *url = [[NSURL alloc]initWithString:ghEventsAPIRUL];
@@ -33,6 +36,10 @@
     
 }
 
+
+/**
+ this method handles user's registration
+ */
 - (void) registerUser:(NSString *)email withPassword:(NSString *)password andFirstName:(NSString *)firstName andLastName:(NSString *)lastName{
     NSString *ghEventsAPIRUL = @"http://192.168.0.106:5000/user/reg";
     NSURL *url = [[NSURL alloc]initWithString:ghEventsAPIRUL];
@@ -49,6 +56,15 @@
     [ request setHTTPBody: myRequestData ];
     
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:self.handler];
+}
+
+
+
+/**
+ 
+ */
+- (void) submitParking: (Parking *) parking{
+    
 }
                       
 - (NSString *)urlEncodeValue:(NSString *)str

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Parking.h"
 
 @interface evaWebService : NSObject
 
@@ -17,6 +18,7 @@
 -(void) loginForUser:(NSString*) userName withPassword: (NSString*) password;
 -(void) registerUser:(NSString*) email withPassword: (NSString*) passowrd
         andFirstName: (NSString*) firstName andLastName:(NSString*) lastName;
+-(void) submitParking: (Parking*) parking;
 
 -(NSString *)urlEncodeValue:(NSString *)str;
 @end
