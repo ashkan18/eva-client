@@ -20,6 +20,8 @@
 		41AE979315C89C9A00121DC7 /* evaViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41AE979115C89C9A00121DC7 /* evaViewController_iPhone.xib */; };
 		41AE979615C89C9A00121DC7 /* evaViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41AE979415C89C9A00121DC7 /* evaViewController_iPad.xib */; };
 		41F7934E15D70D58009BB336 /* EvaUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F7934D15D70D58009BB336 /* EvaUser.m */; };
+		41F7935215D70F33009BB336 /* EvaSubmitParkingRentalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F7935015D70F33009BB336 /* EvaSubmitParkingRentalViewController.m */; };
+		41F7935315D70F33009BB336 /* EvaSubmitParkingRentalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F7935115D70F33009BB336 /* EvaSubmitParkingRentalViewController.xib */; };
 		41FC68FB15D706AC00CF9292 /* Parking.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FC68FA15D706AC00CF9292 /* Parking.m */; };
 		41FF535A15D33A5600013553 /* EvaRegisterUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FF535815D33A5600013553 /* EvaRegisterUserViewController.m */; };
 		41FF535B15D33A5600013553 /* EvaRegisterUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FF535915D33A5600013553 /* EvaRegisterUserViewController.xib */; };
@@ -47,6 +49,9 @@
 		41AE979515C89C9A00121DC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/evaViewController_iPad.xib; sourceTree = "<group>"; };
 		41F7934C15D70D58009BB336 /* EvaUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaUser.h; sourceTree = "<group>"; };
 		41F7934D15D70D58009BB336 /* EvaUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaUser.m; sourceTree = "<group>"; };
+		41F7934F15D70F33009BB336 /* EvaSubmitParkingRentalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaSubmitParkingRentalViewController.h; sourceTree = "<group>"; };
+		41F7935015D70F33009BB336 /* EvaSubmitParkingRentalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaSubmitParkingRentalViewController.m; sourceTree = "<group>"; };
+		41F7935115D70F33009BB336 /* EvaSubmitParkingRentalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EvaSubmitParkingRentalViewController.xib; sourceTree = "<group>"; };
 		41FC68F915D706AC00CF9292 /* Parking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parking.h; sourceTree = "<group>"; };
 		41FC68FA15D706AC00CF9292 /* Parking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parking.m; sourceTree = "<group>"; };
 		41FF535715D33A5600013553 /* EvaRegisterUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaRegisterUserViewController.h; sourceTree = "<group>"; };
@@ -107,21 +112,12 @@
 		41AE978215C89C9A00121DC7 /* eVa */ = {
 			isa = PBXGroup;
 			children = (
+				41F7935415D710DA009BB336 /* controllers */,
 				416FD9DF15C99F5700D7D489 /* services */,
 				41AE979C15C89E3000121DC7 /* models */,
 				41AE978B15C89C9A00121DC7 /* evaAppDelegate.h */,
 				41AE978C15C89C9A00121DC7 /* evaAppDelegate.m */,
-				41AE978E15C89C9A00121DC7 /* evaViewController.h */,
-				41AE978F15C89C9A00121DC7 /* evaViewController.m */,
-				4102580115CD566800367C9B /* EvaMainPageControllerViewController.h */,
-				4102580215CD566800367C9B /* EvaMainPageControllerViewController.m */,
-				4102580315CD566800367C9B /* EvaMainPageControllerViewController.xib */,
-				41AE979115C89C9A00121DC7 /* evaViewController_iPhone.xib */,
-				41AE979415C89C9A00121DC7 /* evaViewController_iPad.xib */,
 				41AE978315C89C9A00121DC7 /* Supporting Files */,
-				41FF535715D33A5600013553 /* EvaRegisterUserViewController.h */,
-				41FF535815D33A5600013553 /* EvaRegisterUserViewController.m */,
-				41FF535915D33A5600013553 /* EvaRegisterUserViewController.xib */,
 			);
 			path = eVa;
 			sourceTree = "<group>";
@@ -146,6 +142,42 @@
 				41F7934D15D70D58009BB336 /* EvaUser.m */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		41F7935415D710DA009BB336 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				41F7935615D710EC009BB336 /* parking */,
+				41F7935515D710E6009BB336 /* user */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		41F7935515D710E6009BB336 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				41FF535715D33A5600013553 /* EvaRegisterUserViewController.h */,
+				41FF535815D33A5600013553 /* EvaRegisterUserViewController.m */,
+				41FF535915D33A5600013553 /* EvaRegisterUserViewController.xib */,
+				41AE978E15C89C9A00121DC7 /* evaViewController.h */,
+				41AE978F15C89C9A00121DC7 /* evaViewController.m */,
+				4102580115CD566800367C9B /* EvaMainPageControllerViewController.h */,
+				4102580215CD566800367C9B /* EvaMainPageControllerViewController.m */,
+				4102580315CD566800367C9B /* EvaMainPageControllerViewController.xib */,
+				41AE979115C89C9A00121DC7 /* evaViewController_iPhone.xib */,
+				41AE979415C89C9A00121DC7 /* evaViewController_iPad.xib */,
+			);
+			name = user;
+			sourceTree = "<group>";
+		};
+		41F7935615D710EC009BB336 /* parking */ = {
+			isa = PBXGroup;
+			children = (
+				41F7934F15D70F33009BB336 /* EvaSubmitParkingRentalViewController.h */,
+				41F7935015D70F33009BB336 /* EvaSubmitParkingRentalViewController.m */,
+				41F7935115D70F33009BB336 /* EvaSubmitParkingRentalViewController.xib */,
+			);
+			name = parking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +237,7 @@
 				41AE979615C89C9A00121DC7 /* evaViewController_iPad.xib in Resources */,
 				4102580515CD566800367C9B /* EvaMainPageControllerViewController.xib in Resources */,
 				41FF535B15D33A5600013553 /* EvaRegisterUserViewController.xib in Resources */,
+				41F7935315D70F33009BB336 /* EvaSubmitParkingRentalViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +256,7 @@
 				41FF535A15D33A5600013553 /* EvaRegisterUserViewController.m in Sources */,
 				41FC68FB15D706AC00CF9292 /* Parking.m in Sources */,
 				41F7934E15D70D58009BB336 /* EvaUser.m in Sources */,
+				41F7935215D70F33009BB336 /* EvaSubmitParkingRentalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

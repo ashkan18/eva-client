@@ -18,4 +18,5 @@
 @property (nonatomic, copy) NSString* country;
 @property (nonatomic, copy) NSString* latitude;
 @property (nonatomic, copy) NSString* longtitude;
+@property (nonatomic, copy) NSNumber *numberOfSpots;
 @end

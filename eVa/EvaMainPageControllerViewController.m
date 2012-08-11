@@ -52,4 +52,5 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+
 @end

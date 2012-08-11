@@ -119,4 +119,15 @@
     }
 }
 
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.email resignFirstResponder];
+    [self.password resignFirstResponder];
+    [self.confirmPassword resignFirstResponder];
+    [self.firstName resignFirstResponder];
+    [self.lastName resignFirstResponder];
+    
+}
+
+
 @end

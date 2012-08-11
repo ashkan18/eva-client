@@ -110,4 +110,11 @@
     [self presentViewController:rvc animated:YES completion:nil];
 }
 
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.userName resignFirstResponder];
+    [self.password resignFirstResponder];
+}
+
+
 @end
